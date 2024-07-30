@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionário de TDAH</title>
+    <style>
+        body {
+            background-color: #ffae00;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 90%;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FFF8DC;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            display: block;
+            margin: 0 auto;
+            width: 70px;
+            height: 70px;
+        }
+        h1 {
+            text-align: center;
+            color: #513612;
+            font-size: 14pt;
+            font-weight: bold;
+        }
+        .instructions, .question, .orientation {
+            margin-bottom: 20px;
+        }
+        .instructions p, .orientation p {
+            text-align: justify;
+            color: #000;
+            font-size: 12pt;
+        }
+        .orientation {
+            background-color: #FFE4B5;
+            border: 1px solid #D2691E;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .orientation b {
+            font-weight: bold;
+        }
+        .question {
+            background-color: #ffd191;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .question p {
+            color: #000;
+            font-size: 12pt;
+        }
+        .button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: center;
+            background-color: #795014;
+            color: #FFFF00;
+            border: none;
+            border-radius: 5px;
+            font-size: 12pt;
+            cursor: pointer;
+        }
+        .button-secondary {
+            background-color: #795014;
+            color: #FFFF00;
+            margin-top: 10px;
+        }
+        .result-message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12pt;
+        }
+        .error {
+            color: #0000FF;
+        }
+        .success {
+            color: #0000FF;
+        }
+        .normal {
+            color: #000000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEh40Eulpe-YZG7lV9fvJJRnmd9ZurKrH4GhrSzziAPiGdLqjuOX-xNDcYews2dBUpHqvfVozuL22ISDNktw8yMGvRPMkl6Ykc_KF7uQ87UiaVkT0o8fdYgcEaUWP6Y9oMSVDcQSkM8N-McMsNF_RO59R5z_-O2fDANLR8gF03M3LwcskULu_mwM6IVxe7nu=s814" alt="Logo" class="logo">
+        <h1>Confira se você apresenta indícios do Transtorno de Déficit de Atenção / Hiperatividade (TDAH)</h1>
+        <div class="instructions">
+            <p>Este questionário foi baseado no Adult Self-Report Scale (ASRS), desenvolvida para adaptar os sintomas listados no DSM-V para o contexto da vida adulta.</p>
+            <p>Referência: Mattos P, Segenreich D, Saboya E, Louzã M, Dias G, Romano M. Adaptação Transcultural para o Português da Escala Adult Self-Report Scale (ASRS-18, versão1.1) para avaliação de sintomas do Transtorno de Déficit de Atenção / Hiperatividade (TDAH) em adultos. Revista Brasileira de Psiquiatria (in press).</p>
+            <p>O resultado deste conteúdo serve apenas como ponto de partida para levantamento de possíveis características primárias do TDAH.</p>
+            <p><b>O diagnóstico do TDAH só pode ser feito através de um profissional.</b></p>
+        </div>
+        <div class="orientation">
+            <p><b>Orientação:</b> Abaixo se encontra uma lista com 18 questões. Leia cada uma delas e assinale a opção que mais estiver de acordo com sua realidade. Não deixe nenhuma afirmativa sem resposta. No final, clique em "Resultado".</p>
+        </div>
+        <form id="questionario">
+            <div class="question">
+                <p>01. Com que frequência você comete erros por falta de atenção quando tem de trabalhar num projeto chato ou difícil?</p>
+                <label><input type="radio" name="q01" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q01" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q01" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q01" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q01" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>02. Com que frequência você tem dificuldade para manter a atenção quando está fazendo um trabalho chato ou repetitivo?</p>
+                <label><input type="radio" name="q02" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q02" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q02" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q02" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q02" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>03. Com que frequência você tem dificuldade para se concentrar no que as pessoas dizem, mesmo quando elas estão falando diretamente com você?</p>
+                <label><input type="radio" name="q03" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q03" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q03" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q03" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q03" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>04. Com que frequência você deixa um projeto pela metade depois de já ter feito as partes mais difíceis?</p>
+                <label><input type="radio" name="q04" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q04" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q04" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q04" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q04" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>05. Com que frequência você tem dificuldade para fazer um trabalho que exige organização?</p>
+                <label><input type="radio" name="q05" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q05" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q05" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q05" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q05" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>06. Quando você precisa fazer algo que exige muita concentração, com que frequência você evita ou adia o início?</p>
+                <label><input type="radio" name="q06" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q06" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q06" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q06" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q06" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>07. Com que frequência você coloca as coisas fora do lugar ou tem dificuldade de encontrar as coisas em casa ou no trabalho?</p>
+                <label><input type="radio" name="q07" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q07" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q07" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q07" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q07" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>08. Com que frequência você se distrai com atividades ou barulho à sua volta?</p>
+                <label><input type="radio" name="q08" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q08" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q08" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q08" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q08" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>09. Com que frequência você tem dificuldade para lembrar de compromissos ou obrigações?</p>
+                <label><input type="radio" name="q09" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q09" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q09" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q09" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q09" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>10. Com que frequência você fica se mexendo na cadeira ou balançando as mãos ou os pés quando precisa ficar sentado(a) por muito tempo?</p>
+                <label><input type="radio" name="q10" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q10" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q10" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q10" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q10" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>11. Com que frequência você se levanta da cadeira em reuniões ou em outras situações onde deveria ficar sentado(a)?</p>
+                <label><input type="radio" name="q11" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q11" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q11" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q11" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q11" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>12. Com que frequência você se sente inquieto(a) ou agitado(a)?</p>
+                <label><input type="radio" name="q12" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q12" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q12" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q12" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q12" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>13. Com que frequência você tem dificuldade para sossegar e relaxar quando tem tempo livre para você?</p>
+                <label><input type="radio" name="q13" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q13" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q13" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q13" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q13" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>14. Com que frequência você se sente ativo(a) demais e necessitando fazer coisas, como se estivesse “com um motor ligado”?</p>
+                <label><input type="radio" name="q14" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q14" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q14" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q14" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q14" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>15. Com que frequência você se pega falando demais em situações sociais?</p>
+                <label><input type="radio" name="q15" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q15" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q15" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q15" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q15" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>16. Quando você está conversando, com que frequência você se pega terminando as frases das pessoas antes delas?</p>
+                <label><input type="radio" name="q16" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q16" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q16" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q16" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q16" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>17. Com que frequência você tem dificuldade para esperar nas situações onde cada um tem a sua vez?</p>
+                <label><input type="radio" name="q17" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q17" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q17" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q17" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q17" value="1"> e) Muito frequentemente</label>
+            </div>
+            <div class="question">
+                <p>18. Com que frequência você interrompe os outros quando eles estão ocupados?</p>
+                <label><input type="radio" name="q18" value="0"> a) Nunca</label>
+                <label><input type="radio" name="q18" value="0"> b) Raramente</label>
+                <label><input type="radio" name="q18" value="0"> c) Algumas vezes</label>
+                <label><input type="radio" name="q18" value="1"> d) Frequentemente</label>
+                <label><input type="radio" name="q18" value="1"> e) Muito frequentemente</label>
+            </div>
+            <button type="button" class="button" onclick="calcularResultado()">Resultado</button>
+        </form>
+        <div id="result" class="result-message" style="display: none;"></div>
+        <button class="button button-secondary" onclick="reiniciarTeste()">Reiniciar teste</button>
+        <button class="button button-secondary" onclick="voltarPaginaInicial()">Voltar à página inicial</button>
+    </div>
+
+    <script>
+        function calcularResultado() {
+            const form = document.forms['questionario'];
+            let bloco1 = 0;
+            let bloco2 = 0;
+            let bloco1Count = 0;
+            let bloco2Count = 0;
+
+            for (let i = 1; i <= 18; i++) {
+                const questionName = 'q' + (i < 10 ? '0' + i : i);
+                const answer = form.elements[questionName].value;
+
+                if (i <= 9 && answer !== '') {
+                    bloco1 += parseInt(answer);
+                    bloco1Count++;
+                } else if (i >= 10 && answer !== '') {
+                    bloco2 += parseInt(answer);
+                    bloco2Count++;
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+
+            if (bloco1Count < 9 || bloco2Count < 9) {
+                resultDiv.className = 'result-message error';
+                resultDiv.textContent = 'Por favor, responda todas as perguntas.';
+            } else {
+                let message = 'Você não apresenta indícios suficientes de TDAH.';
+                if (bloco1 >= 4 || bloco2 >= 4) {
+                    message = 'Você apresenta alguns indícios de TDAH. Pode ser útil discutir seus sintomas com um profissional de saúde.';
+                    resultDiv.className = 'result-message success';
+                } else {
+                    resultDiv.className = 'result-message normal';
+                }
+                resultDiv.textContent = message;
+            }
+        }
+
+        function reiniciarTeste() {
+            document.getElementById('questionario').reset();
+            document.getElementById('result').style.display = 'none';
+        }
+
+        function voltarPaginaInicial() {
+            window.location.href = 'https://utilitea.glide.page';
+        }
+    </script>
+</body>
+</html>
